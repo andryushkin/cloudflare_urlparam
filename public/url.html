@@ -13,10 +13,22 @@
         }
     </style>
     <script>
+        let group1 = 'value1';
+        let group2 = 'value1';
+        let group3 = 'value1';
+
         function updateUrlParameter(param, value) {
-            const currentUrl = new URL(window.location.href);
-            currentUrl.searchParams.set(param, value);
-            window.history.pushState({}, '', currentUrl);
+            if (param === 'group1') {
+                group1 = value;
+            } else if (param === 'group2') {
+                group2 = value;
+            } else if (param === 'group3') {
+                group3 = value;
+            }
+
+            const baseUrl = 'https://cloudflare-urlparam.pages.dev/url/';
+            const newUrl = `${baseUrl}${group1}-${group2}-${group3}/`;
+            window.history.pushState({}, '', newUrl);
         }
     </script>
 </head>
