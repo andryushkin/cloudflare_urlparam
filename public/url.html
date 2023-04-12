@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопки и URL-параметры</title>
+    <style>
+        .button-group {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function updateUrlParameter(param, value) {
+            const currentUrl = new URL(window.location.href);
+            currentUrl.searchParams.set(param, value);
+            window.history.pushState({}, '', currentUrl);
+        }
+    </script>
+</head>
+<body>
+    <div class="button-group">
+        <button onclick="updateUrlParameter('group1', 'value1')">Группа 1, Значение 1</button>
+        <button onclick="updateUrlParameter('group1', 'value2')">Группа 1, Значение 2</button>
+        <button onclick="updateUrlParameter('group1', 'value3')">Группа 1, Значение 3</button>
+    </div>
+    <div class="button-group">
+        <button onclick="updateUrlParameter('group2', 'value1')">Группа 2, Значение 1</button>
+        <button onclick="updateUrlParameter('group2', 'value2')">Группа 2, Значение 2</button>
+        <button onclick="updateUrlParameter('group2', 'value3')">Группа 2, Значение 3</button>
+    </div>
+    <div class="button-group">
+        <button onclick="updateUrlParameter('group3', 'value1')">Группа 3, Значение 1</button>
+        <button onclick="updateUrlParameter('group3', 'value2')">Группа 3, Значение 2</button>
+        <button onclick="updateUrlParameter('group3', 'value3')">Группа 3, Значение 3</button>
+    </div>
+</body>
+</html>
