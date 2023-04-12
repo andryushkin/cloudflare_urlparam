@@ -1,1 +1,1 @@
-/url/*/ /url:splat/ 200
+/url/*/ /url/:splat/ 200
