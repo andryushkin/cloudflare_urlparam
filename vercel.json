@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true
+}
+
+{
+  "rewrites": [
+    { "source": "/url/:width/:height", "destination": "/url.html" },
+  ]
+}
