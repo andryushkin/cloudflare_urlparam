@@ -1,9 +1,5 @@
 {
-  "cleanUrls": true
-}
-
-{
   "rewrites": [
-    { "source": "/url/:width/:height", "destination": "/url.html" },
+    { "source": "/url/:param1", "destination": "/url.html?:param1" },
   ]
 }
