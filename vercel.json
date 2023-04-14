@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/url", "destination": "/url.html" },
     { "source": "/url/:param1", "destination": "/url.html" }
   ]
 }
