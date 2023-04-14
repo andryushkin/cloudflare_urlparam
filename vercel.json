@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/:path*", "destination": "/url.html" },
-    { "source": "/:path*/:param1", "destination": "/url.html" }
+    { "source": "/:path*", "destination": "/:path*.html" },
+    { "source": "/:path*/", "destination": "/:path*.html" },
+    { "source": "/:path*/:param", "destination": "/:path*.html?:param" }
   ]
 }
